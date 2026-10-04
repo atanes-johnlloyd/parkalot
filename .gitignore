@@ -1,0 +1,23 @@
+# Java / Maven
+target/
+build/
+dist/
+*.class
+*.jar
+!.mvn/wrapper/maven-wrapper.jar
+
+# NetBeans
+nbproject/private/
+nbproject/build-impl.xml
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db

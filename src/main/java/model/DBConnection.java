@@ -1,0 +1,22 @@
+package model;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class DBConnection {
+    private static final String URL = "jdbc:mysql://localhost:3306/parkalot_db";
+    private static final String USER = "root";
+    private static final String PASSWORD = "";
+
+    public static Connection connect() {
+        try {
+            // Remove the success print — only log errors
+            return DriverManager.getConnection(URL, USER, PASSWORD);
+        } catch (SQLException e) {
+            System.out.println("Cannot connect the database!");
+            e.printStackTrace();
+            return null;
+        }
+    }
+}
